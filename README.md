@@ -40,10 +40,10 @@ git clone https://github.com/kullaniciadi/macster.git
 cd macster
 
 # Çalıştırılabilir yapın
-chmod +x macster.py
+chmod +x Macster.py
 
 # Root yetkisi ile çalıştırın
-sudo python3 macster.py
+sudo python3 Macster.py
 ```
 
 ## 📖 Kullanım
