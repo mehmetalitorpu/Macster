@@ -37,7 +37,7 @@ sudo pacman -S macchanger net-tools wireless_tools ethtool
 ```bash
 # Clone the repository
 git clone https://github.com/username/Macster.git
-cd macster
+cd Macster
 
 # Make it executable
 chmod +x Macster.py
