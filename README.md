@@ -142,9 +142,6 @@ tail -f /tmp/mac_changer_wlan0.log
 4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
 5. Pull Request oluşturun
 
-##  Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakın.
 
 ##  Yıldız Verin
 
