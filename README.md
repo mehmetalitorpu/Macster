@@ -7,12 +7,12 @@ MACster, Linux sistemlerde MAC adreslerini değiştirmek için geliştirilmiş k
 ##  Özellikler
 
  **Kolay Kullanım**: Kullanıcı dostu menü arayüzü
--  **Otomatik MAC Değiştirme**: Belirli aralıklarla otomatik MAC değişimi
--  **Güvenli Geri Yükleme**: Orijinal MAC adresine güvenli dönüş
--  **Dinamik İzleme**: MAC adreslerini gerçek zamanlı takip
--  **Sistem Servisi**: Sistem başlangıcında otomatik çalışma
--  **Loglama**: Tüm işlemlerin detaylı loglanması
--  **Çoklu Arayüz Desteği**: Kablolu ve kablosuz arayüzler
+  **Otomatik MAC Değiştirme**: Belirli aralıklarla otomatik MAC değişimi
+  **Güvenli Geri Yükleme**: Orijinal MAC adresine güvenli dönüş
+  **Dinamik İzleme**: MAC adreslerini gerçek zamanlı takip
+  **Sistem Servisi**: Sistem başlangıcında otomatik çalışma
+  **Loglama**: Tüm işlemlerin detaylı loglanması
+  **Çoklu Arayüz Desteği**: Kablolu ve kablosuz arayüzler
 
 ##  Kurulum
 
