@@ -51,7 +51,7 @@ sudo python3 Macster.py
 ### Temel Kullanım
 
 ```bash
-sudo python3 macster.py
+sudo python3 Macster.py
 ```
 
 ### Menü Seçenekleri
