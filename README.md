@@ -36,14 +36,14 @@ sudo pacman -S macchanger net-tools wireless_tools ethtool
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/macster.git
+git clone https://github.com/username/Macster.git
 cd macster
 
 # Make it executable
-chmod +x macster.py
+chmod +x Macster.py
 
 # Run with root privileges
-sudo python3 macster.py
+sudo python3 Macster.py
 ```
 
 ## Usage
@@ -51,7 +51,7 @@ sudo python3 macster.py
 ### Basic Usage
 
 ```bash
-sudo python3 macster.py
+sudo python3 Macster.py
 ```
 
 ### Menu Options
@@ -68,10 +68,10 @@ sudo python3 macster.py
 
 ```bash
 # Run in daemon mode
-sudo python3 macster.py --daemon [interface] [count] [interval]
+sudo python3 Macster.py --daemon [interface] [count] [interval]
 
 # Example: Change wlan0 interface 10 times per hour
-sudo python3 macster.py --daemon wlan0 10 360
+sudo python3 Macster.py --daemon wlan0 10 360
 ```
 
 ## Technical Details
@@ -112,7 +112,7 @@ macster/
 
 1. **"This script requires root privileges!" error**
    ```bash
-   sudo python3 macster.py
+   sudo python3 Macster.py
    ```
 
 2. **macchanger not found error**
