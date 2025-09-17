@@ -2,21 +2,21 @@
 
 ![MACster Banner](https://img.shields.io/badge/MACster-MAC%20Changer-green?style=for-the-badge&logo=terminal)
 
-MACster, Linux sistemlerde MAC adreslerini değiştirmek için geliştirilmiş kullanıcı dostu bir Python scriptidir. Mevcut sistem araçlarını kullanarak güvenli ve etkili MAC değiştirme işlemleri gerçekleştirir.
+MACster is a user-friendly Python script developed for changing MAC addresses on Linux systems. It performs secure and effective MAC address changing operations using existing system tools.
 
-##  Özellikler
+## Features
 
-- **Kolay Kullanım**: Kullanıcı dostu menü arayüzü
--  **Otomatik MAC Değiştirme**: Belirli aralıklarla otomatik MAC değişimi
--  **Güvenli Geri Yükleme**: Orijinal MAC adresine güvenli dönüş
--  **Dinamik İzleme**: MAC adreslerini gerçek zamanlı takip
--  **Sistem Servisi**: Sistem başlangıcında otomatik çalışma
--  **Loglama**: Tüm işlemlerin detaylı loglanması
--  **Çoklu Arayüz Desteği**: Kablolu ve kablosuz arayüzler
+- **Easy to Use**: User-friendly menu interface
+- **Automatic MAC Changing**: Automatic MAC changes at specified intervals
+- **Safe Restoration**: Secure return to original MAC address
+- **Dynamic Monitoring**: Real-time MAC address tracking
+- **System Service**: Automatic startup on system boot
+- **Logging**: Detailed logging of all operations
+- **Multi-Interface Support**: Wired and wireless interfaces
 
-##  Kurulum
+## Installation
 
-### Gereksinimler
+### Requirements
 
 ```bash
 # Ubuntu/Debian
@@ -25,135 +25,138 @@ sudo apt install macchanger ifconfig iwconfig ethtool
 
 # CentOS/RHEL/Fedora
 sudo yum install macchanger net-tools wireless-tools ethtool
-# veya
+# or
 sudo dnf install macchanger net-tools wireless-tools ethtool
 
 # Arch Linux
 sudo pacman -S macchanger net-tools wireless_tools ethtool
 ```
 
-### Script Kurulumu
+### Script Installation
 
 ```bash
-# Repository'yi klonlayın
-git clone https://github.com/mehmetalitorpu/Macster.git
-cd Macster
+# Clone the repository
+git clone https://github.com/username/macster.git
+cd macster
 
-# Çalıştırılabilir yapın
-chmod +x Macster.py
+# Make it executable
+chmod +x macster.py
 
-# Root yetkisi ile çalıştırın
-sudo python3 Macster.py
+# Run with root privileges
+sudo python3 macster.py
 ```
 
-## 📖 Kullanım
+## Usage
 
-### Temel Kullanım
+### Basic Usage
 
 ```bash
-sudo python3 Macster.py
+sudo python3 macster.py
 ```
 
-### Menü Seçenekleri
+### Menu Options
 
-1. **MAC Değiştirmeyi Başlat** - Belirli bir arayüz için MAC değiştirme işlemini başlatır
-2. **MAC Değiştirmeyi Durdur** - Tüm MAC değiştirme işlemlerini durdurur ve orijinal MAC'lere döner
-3. **Otomatik Başlatma Ayarla** - Sistem başlangıcında otomatik çalışma ayarlar
-4. **Otomatik Başlatmayı Kaldır** - Otomatik başlatma ayarlarını kaldırır
-5. **Orijinal MAC'e Döndür** - Seçilen arayüzü orijinal MAC adresine döndürür
-6. **MAC Adreslerini Görüntüle** - Tüm arayüzlerin MAC adreslerini dinamik olarak izler
-7. **Çıkış** - Programdan çıkar
+1. **Start MAC Changing** - Starts MAC changing process for a specific interface
+2. **Stop MAC Changing** - Stops all MAC changing processes and returns to original MACs
+3. **Set Auto Startup** - Configures automatic startup on system boot
+4. **Remove Auto Startup** - Removes automatic startup configuration
+5. **Restore Original MAC** - Returns selected interface to original MAC address
+6. **View MAC Addresses** - Dynamically monitors MAC addresses of all interfaces
+7. **Exit** - Exits the program
 
-### Komut Satırı Kullanımı
+### Command Line Usage
 
 ```bash
-# Daemon modunda çalıştırma
+# Run in daemon mode
 sudo python3 macster.py --daemon [interface] [count] [interval]
 
-# Örnek: wlan0 arayüzü için saatte 10 kez değiştir
+# Example: Change wlan0 interface 10 times per hour
 sudo python3 macster.py --daemon wlan0 10 360
 ```
 
-## 🔧 Teknik Detaylar
+## Technical Details
 
-### Kullanılan Sistem Araçları
+### System Tools Used
 
-- **`ifconfig`** - MAC adresini değiştirmek için
-- **`macchanger`** - Orijinal MAC'i geri yüklemek için
-- **`iwconfig`** - Kablosuz arayüzleri tespit etmek için
-- **`ethtool`** - Orijinal MAC adresini almak için
+- **`ifconfig`** - For changing MAC addresses
+- **`macchanger`** - For restoring original MAC
+- **`iwconfig`** - For detecting wireless interfaces
+- **`ethtool`** - For getting original MAC address
 
-### Güvenlik Özellikleri
+### Security Features
 
-- Root yetkisi kontrolü
-- Arayüz varlık kontrolü
-- Hata yönetimi ve loglama
-- Güvenli geri yükleme mekanizması
+- Root privilege check
+- Interface existence validation
+- Error handling and logging
+- Safe restoration mechanism
 
-##  Dosya Yapısı
+## File Structure
 
 ```
 macster/
-├── macster.py          # Ana script dosyası
-├── README.md           # Bu dosya
-└── requirements.txt    # Python gereksinimleri
+├── macster.py          # Main script file
+├── README.md           # This file
+└── requirements.txt    # Python requirements
 ```
 
-##  Önemli Notlar
+## Important Notes
 
-- **Root Yetkisi Gerekli**: Script, ağ arayüzlerini değiştirmek için root yetkisi gerektirir
-- **Sistem Uyumluluğu**: Linux sistemlerde test edilmiştir
-- **Yedekleme**: Orijinal MAC adreslerini kaydetmeyi unutmayın
-- **Yasal Uyarı**: Bu aracı sadece yasal amaçlarla kullanın
+- **Root Privileges Required**: Script requires root privileges to modify network interfaces
+- **System Compatibility**: Tested on Linux systems
+- **Backup**: Don't forget to save original MAC addresses
+- **Legal Warning**: Use this tool only for legal purposes
 
-##  Sorun Giderme
+## Troubleshooting
 
-### Yaygın Sorunlar
+### Common Issues
 
-1. **"Bu script root yetkisi gerektirir!" hatası**
+1. **"This script requires root privileges!" error**
    ```bash
    sudo python3 macster.py
    ```
 
-2. **macchanger bulunamadı hatası**
+2. **macchanger not found error**
    ```bash
    sudo apt install macchanger  # Ubuntu/Debian
    sudo yum install macchanger  # CentOS/RHEL
    ```
 
-3. **Arayüz bulunamadı hatası**
+3. **Interface not found error**
    ```bash
-   ifconfig -a  # Mevcut arayüzleri listele
+   ifconfig -a  # List available interfaces
    ```
 
-### Log Dosyaları
+### Log Files
 
 ```bash
-# Log dosyalarını kontrol edin
+# Check log files
 ls -la /tmp/mac_changer_*.log
 tail -f /tmp/mac_changer_wlan0.log
 ```
 
-##  Katkıda Bulunma
+## Contributing
 
-1. Bu repository'yi fork edin
-2. Feature branch oluşturun (`git checkout -b feature/AmazingFeature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some AmazingFeature'`)
-4. Branch'inizi push edin (`git push origin feature/AmazingFeature`)
-5. Pull Request oluşturun
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file in the GitHub repository for details.
+
+## Star This Project
+
+If you like this project, don't forget to give it a star!
 
 
-##  Yıldız Verin
+## Acknowledgments
 
-Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
-
-
-##  Teşekkürler
-
-- Linux topluluğuna
-- Açık kaynak projelerine
-- Test eden kullanıcılara
+- Linux community
+- Open source projects
+- Testing users
 
 ---
 
-** Yasal Uyarı**: Bu araç sadece eğitim ve yasal test amaçları için geliştirilmiştir. Kullanıcı, bu aracı kullanmaktan doğacak tüm sorumlulukları kabul eder.
+**Legal Warning**: This tool is developed only for educational and legal testing purposes. The user accepts all responsibilities arising from the use of this tool.
