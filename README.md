@@ -36,7 +36,7 @@ sudo pacman -S macchanger net-tools wireless_tools ethtool
 
 ```bash
 # Repository'yi klonlayın
-git clone https://github.com/mehmetalitorpu/macster.git
+git clone https://github.com/mehmetalitorpu/Macster.git
 cd macster
 
 # Çalıştırılabilir yapın
