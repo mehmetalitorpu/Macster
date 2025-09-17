@@ -150,11 +150,6 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için `LICENSE` dosy
 
 Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
 
-##  İletişim
-
-- **Geliştirici**: [Kullanıcı Adı]
-- **Email**: kullanici@email.com
-- **GitHub**: [@kullaniciadi](https://github.com/kullaniciadi)
 
 ##  Teşekkürler
 
